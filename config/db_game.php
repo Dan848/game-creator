@@ -1,5 +1,5 @@
 <?php
-return $game = [
+return [
     'characters' => [
         [
             'name' => 'Arthur',
