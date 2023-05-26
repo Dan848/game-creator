@@ -13,5 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/')->name("home");
+Route::get('/', function () {
+    $data = config("db_partials", "dbPartials");
+        return view('home', compact("data"));
+    })->name("home");
 

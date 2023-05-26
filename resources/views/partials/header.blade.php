@@ -24,7 +24,7 @@
                                 {{-- DropDown Links --}}
                                 @foreach ($links["dropdown"] as $dropLinks)
                                     <li>
-                                        <a href="{{route("order", ["order" => $dropLinks["order"]])}}"
+                                        <a href="#"
                                         class="dropdown-item">{{$dropLinks["text"]}}</a>
                                     </li>
                                 @endforeach
