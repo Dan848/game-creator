@@ -14,7 +14,7 @@ class CharactersController extends Controller
     public function index()
     {
         $data = config("db_partials", "dbPartials");
-        $character = Character::all();
-        return view('home', compact('character', 'data'));
+        $characters = Character::all();
+        return view('home', compact('characters', 'data'));
     }
 }
