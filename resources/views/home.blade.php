@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('page_title')
@@ -30,4 +31,5 @@
             {{-- @endforeach --}}
         </div>
     </div>
+
 @endsection

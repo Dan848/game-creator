@@ -2,6 +2,7 @@
     <nav class="navbar fw-semibold container navbar-expand-lg">
         <div class="container-fluid">
             {{-- Logo --}}
+
             <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="/img/logo.png" alt="logo" width="40" height="40">
             </a>
@@ -45,3 +46,4 @@
         </div>
     </nav>
 </header>
+

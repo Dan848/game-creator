@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $data = config("db_partials", "dbPartials");
-    return view('home', compact("data"));
-})->name("home");
+
+Route::get('/', [CharactersController::class, 'index'])->name('home');
+
