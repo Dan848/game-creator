@@ -35,11 +35,6 @@ return $dbPartials = [
                     'href' => "#"
                 ],
                 [
-                    'text' => "Descrizione",
-                    'order' => "description",
-                    'href' => "#"
-                ],
-                [
                     'text' => "Nome",
                     'order' => "name",
                     'href' => "#"
