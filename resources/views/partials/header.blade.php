@@ -23,7 +23,7 @@
                                     {{-- DropDown Title --}}
                                     {{ $links['text'] }}
                                 </div>
-                                <ul class="dropdown-menu  ">
+                                <ul class="dropdown-menu p-0">
                                     {{-- DropDown Links --}}
                                     @foreach ($links['dropdown'] as $dropLinks)
                                         <li class="">
