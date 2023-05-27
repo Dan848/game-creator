@@ -4,7 +4,7 @@
             {{-- Logo --}}
 
             <a class="navbar-brand" href="{{ route('home') }}">
-                <img src="/img/logo.png" alt="logo" width="40" height="40">
+                <img src="/image/goblin-logo.png" alt="logo" width="40" height="40">
             </a>
             {{-- Burger Menù --}}
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -46,4 +46,3 @@
         </div>
     </nav>
 </header>
-
