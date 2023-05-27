@@ -17,4 +17,13 @@ class CharactersController extends Controller
         $characters = Character::all();
         return view('home', compact('characters', 'data'));
     }
+    public function indexOrder($order)
+    {
+        $data = config("db_partials", "dbPartials");
+        $characters = Character::orderBy($order, "desc")->get();
+        return view('home', compact('characters', 'data'));
+    }
 }
+
+
+

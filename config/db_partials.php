@@ -10,8 +10,13 @@ return $dbPartials = [
             'text' => "Ordina per",
             'dropdown' => [
                 [
-                    'text' => "Forza",
-                    'order' => "atack",
+                    'text' => "Nome",
+                    'order' => "name",
+                    'href' => "#"
+                ],
+                [
+                    'text' => "Attacco",
+                    'order' => "attack",
                     'href' => "#"
                 ],
                 [
@@ -20,13 +25,13 @@ return $dbPartials = [
                     'href' => "#"
                 ],
                 [
-                    'text' => "Velocità",
-                    'order' => "speed",
+                    'text' => "Intelligenza",
+                    'order' => "intelligence",
                     'href' => "#"
                 ],
                 [
-                    'text' => "Intelligenza",
-                    'order' => "intelligence",
+                    'text' => "Velocità",
+                    'order' => "speed",
                     'href' => "#"
                 ],
                 [
@@ -34,12 +39,6 @@ return $dbPartials = [
                     'order' => "life",
                     'href' => "#"
                 ],
-                [
-                    'text' => "Nome",
-                    'order' => "name",
-                    'href' => "#"
-                ],
-
             ]
         ],
     ],
