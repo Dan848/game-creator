@@ -29,7 +29,8 @@ $fa-font-path: "../fonts/webfonts" !default;
 max-width: 400px;
 }
 
-.card-head span{
+.info-box{
+    display: inline-block;
     background-color: #39234d;
     width: 30px;
     height: 30px;
