@@ -4,7 +4,7 @@
             {{-- Logo --}}
 
             <a class="navbar-brand " href="{{ route('home') }}">
-                <img src="/image/goblin-logo.png" alt="logo" width="40" height="40">
+                <img src="/img/goblin-logo.png" alt="logo" width="40" height="40">
             </a>
             {{-- Burger Menù --}}
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -27,7 +27,8 @@
                                     {{-- DropDown Links --}}
                                     @foreach ($links['dropdown'] as $dropLinks)
                                         <li>
-                                            <a href="{{route("homeOrder", ["order" => $dropLinks["order"]])}}" class="dropdown-item">{{ $dropLinks['text'] }}</a>
+                                            <a href="{{ route('homeOrder', ['order' => $dropLinks['order']]) }}"
+                                                class="dropdown-item">{{ $dropLinks['text'] }}</a>
                                         </li>
                                     @endforeach
                                 </ul>
