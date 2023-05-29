@@ -10,6 +10,28 @@ $fa-font-path: "../fonts/webfonts" !default;
 
 @import '~bootstrap/scss/bootstrap';
 
+header {
+    background-color: #5d3385;
+
+    .navbar-nav .nav-item .nav-link {
+        color: rgb(0, 0, 0);
+    }
+
+    .navbar-nav .nav-item.active .nav-link,
+    .navbar-nav .nav-item:hover .nav-link {
+        color: green;
+    }
+
+    .navbar-nav>li>.dropdown-menu a:link,
+    .navbar-nav>li>.dropdown-menu a:hover {
+        background-color: #5d3385;
+        color: green;
+        padding: -20px;
+    }
+
+
+}
+
 .info{
     h1{
         color: #0f810d;
