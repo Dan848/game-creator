@@ -9,3 +9,29 @@ $fa-font-path: "../fonts/webfonts" !default;
 @import "~@fortawesome/fontawesome-free/scss/brands";
 
 @import '~bootstrap/scss/bootstrap';
+
+.info{
+    h1{
+        color: #0f810d;
+    }
+    ul{
+        li{
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid black;
+            span{
+                color: #0f810d;
+            }
+        }
+    }
+}
+.image-character{
+max-width: 400px;
+}
+
+.info-box{
+    display: inline-block;
+    background-color: #39234d;
+    width: 30px;
+    height: 30px;
+}
