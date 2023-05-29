@@ -36,9 +36,20 @@ class CharactersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
-        //
+        $form_data = $request->all();
+        $newCharacter = new Character();
+        $newCharacter->name = $form_data['name'];
+        $newCharacter->description = $form_data['description'];
+        $newCharacter->attack = $form_data['attack'];
+        $newCharacter->defence = $form_data['defence'];
+        $newCharacter->speed = $form_data['speed'];
+        $newCharacter->intelligence = $form_data['intelligence'];
+        $newCharacter->life = $form_data['life'];
+        $newCharacter->save();
+        return redirect()->route('characters.show', $newCharacter->id);
     }
 
     /**
