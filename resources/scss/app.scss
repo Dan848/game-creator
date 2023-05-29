@@ -13,21 +13,21 @@ $fa-font-path: "../fonts/webfonts" !default;
 // HEADER Style config
 
 header {
-    background-color: #5d3385;
+    background-color: $primary-color;
 
     .navbar-nav .nav-item .nav-link {
-        color: rgb(0, 0, 0);
+        color: $dark-color;
     }
 
     .navbar-nav .nav-item.active .nav-link,
     .navbar-nav .nav-item:hover .nav-link {
-        color: green;
+        color: $secondary-color;
     }
 
     .navbar-nav>li>.dropdown-menu a:link,
     .navbar-nav>li>.dropdown-menu a:hover {
         background-color: #5d3385;
-        color: green;
+        color: $secondary-color;
         padding: -20px;
     }
 
@@ -37,7 +37,7 @@ header {
 // CHARACTER INFO Page Style Config
 .info {
     h1 {
-        color: #0f810d;
+        color: $secondary-color;
     }
 
     ul {
@@ -47,7 +47,7 @@ header {
             border-bottom: 1px solid black;
 
             span {
-                color: #0f810d;
+                color: $secondary-color;
             }
         }
     }
@@ -60,7 +60,7 @@ header {
 // CHARACTER LIST Page Style Config
 .info-box {
     display: inline-block;
-    background-color: #39234d;
+    background-color: $primary-color;
     width: 30px;
     height: 30px;
 }
