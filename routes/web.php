@@ -15,4 +15,4 @@ use App\Http\Controllers\CharactersController;
 
 
 Route::get('/', [CharactersController::class, 'index'])->name('home');
-
+Route::get('order-by-{order}', [CharactersController::class, 'indexOrder'])->name('homeOrder');

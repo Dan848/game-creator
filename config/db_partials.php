@@ -10,49 +10,34 @@ return $dbPartials = [
             'text' => "Ordina per",
             'dropdown' => [
                 [
-                'text' => "Azienda",
-                'order' => "agency",
-                'href' => "#"
-                ],
-                [
-                    'text' => "Stazione di Partenza",
-                    'order' => "departure_station",
+                    'text' => "Nome",
+                    'order' => "name",
                     'href' => "#"
                 ],
                 [
-                    'text' => "Stazione di Arrivo",
-                    'order' => "arrival_station",
+                    'text' => "Attacco",
+                    'order' => "attack",
                     'href' => "#"
                 ],
                 [
-                'text' => "Orario di partenza",
-                'order' => "departure_time",
-                'href' => "#"
-                ],
-                [
-                    'text' => "Orario di arrivo",
-                    'order' => "arrival_time",
+                    'text' => "Difesa",
+                    'order' => "defence",
                     'href' => "#"
                 ],
                 [
-                    'text' => "Numero Treno",
-                    'order' => "train_code",
+                    'text' => "Intelligenza",
+                    'order' => "intelligence",
                     'href' => "#"
                 ],
                 [
-                'text' => "Numero Carrozze",
-                'order' => "number_of_carriages",
-                'href' => "#"
+                    'text' => "Velocità",
+                    'order' => "speed",
+                    'href' => "#"
                 ],
                 [
-                'text' => "In orario",
-                'order' => "in_time",
-                'href' => "#"
-                ],
-                [
-                'text' => "Cancellato",
-                'order' => "deleted",
-                'href' => "#"
+                    'text' => "Vita",
+                    'order' => "life",
+                    'href' => "#"
                 ],
             ]
         ],
