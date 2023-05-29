@@ -7,6 +7,10 @@ return $dbPartials = [
             'href' => "home"
         ],
         [
+            'text' => "Create",
+            'href' => "characters.create"
+        ],
+        [
             'text' => "Ordina per",
             'dropdown' => [
                 [
