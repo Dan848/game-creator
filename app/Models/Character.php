@@ -9,5 +9,5 @@ class Character extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description', 'strength', 'defence', 'speed', 'life', 'intelligence'];
+    protected $fillable = ['name', 'description', 'attack', 'defence', 'speed', 'life', 'intelligence'];
 }
