@@ -86,4 +86,16 @@ class CharactersController extends Controller
     {
         //
     }
+
+    public function indexOrder($order)
+    {
+        $data = config("db_partials", "dbPartials");
+        if($order === "name") {
+            $characters = Character::orderBy($order, "asc")->get();
+        }
+        else {
+            $characters = Character::orderBy($order, "desc")->get();
+        }
+        return view('home', compact('characters', 'data'));
+    }
 }
