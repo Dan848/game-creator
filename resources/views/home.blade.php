@@ -10,15 +10,13 @@
             @foreach ($characters as $character)
                 <div class="col-12 col-md-4 g-5">
                     <div class="card">
-                        <div class="card-head d-flex justify-content-between p-3">
+                        <div class="text-center d-flex justify-content-between p-3">
                             <h3>
                                 {{ $character['name'] }}
                             </h3>
-                            <span class="rounded-3 text-center">
-                                <a href="{{ route('characters.show', ['id' => $loop->index]) }}" class="text-white">
-                                    <i class="fa-solid fa-info"></i>
-                                </a>
-                            </span>
+                            <a href="{{ route('characters.show', ['id' => $loop->index]) }}" class="info-box rounded-3 text-center text-white">
+                                <i class="fa-solid fa-info"></i>
+                            </a>
                         </div>
                         <div class="card-body">
                             <ul class="list-group list-group-flush">
