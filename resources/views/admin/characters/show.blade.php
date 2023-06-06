@@ -33,8 +33,10 @@
 
                 @csrf
                 @method('DELETE')
-                <a href="{{ route('admin.characters.edit', $character->id) }}"><i class="fa-solid fa-pencil"></i></a>
-                <button type='submit' class="delete-button btn" data-item-title="{{ $character->name }}"> <i
+                <button class="delete-button btn-warning btn"><a
+                        href="{{ route('admin.characters.edit', $character->id) }}"><i class="fa-solid fa-pencil"></i></a>
+                </button>
+                <button type='submit' class="delete-button btn-danger btn" data-item-title="{{ $character->name }}"> <i
                         class="fa-solid  fa-trash"></i></button>
 
             </form>
