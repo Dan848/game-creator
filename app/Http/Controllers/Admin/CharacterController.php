@@ -45,7 +45,7 @@ class CharacterController extends Controller
         $newCharacter = new Character();
         $newCharacter->fill($form_data);
         $newCharacter->save();
-        return redirect()->route('characters.show', $newCharacter->id);
+        return redirect()->route('admin.characters.show', $newCharacter->id);
     }
 
     /**
@@ -57,7 +57,7 @@ class CharacterController extends Controller
     public function show(Character $character)
     {
         $data = config("db_partials", "dbPartials");
-        return view('characters.show', compact('character', 'data'));
+        return view('admin.characters.show', compact('character', 'data'));
     }
 
     /**
