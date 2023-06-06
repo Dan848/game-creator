@@ -4,7 +4,7 @@
     Home
 @endsection
 
-@section('main_content')
+@section('content')
     <div class="container">
         <div class="row">
             @foreach ($characters as $character)

@@ -64,3 +64,41 @@ header {
     width: 30px;
     height: 30px;
 }
+
+#layoutAuthentication {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  #layoutAuthentication #layoutAuthentication_content {
+    min-width: 0;
+    flex-grow: 1;
+  }
+  #layoutAuthentication #layoutAuthentication_footer {
+    min-width: 0;
+  }
+
+  #layoutSidenav {
+    display: flex;
+  }
+  #layoutSidenav #layoutSidenav_nav {
+    flex-basis: 225px;
+    flex-shrink: 0;
+    transition: transform 0.15s ease-in-out;
+    z-index: 1038;
+    transform: translateX(-225px);
+  }
+  #layoutSidenav #layoutSidenav_content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+    flex-grow: 1;
+    min-height: calc(100vh - 56px);
+    margin-left: -225px;
+  }
+
+
+
+
