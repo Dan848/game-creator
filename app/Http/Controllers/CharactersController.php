@@ -1,17 +1,16 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Character;
-use App\Http\Requests\StoreCharacterRequest;
-use App\Http\Requests\UpdateCharacterRequest;
 
-class CharacterController extends Controller
+class CharactersController extends Controller
 {
     /**
      * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
      */
 
     public function index()
@@ -23,6 +22,8 @@ class CharacterController extends Controller
 
     /**
      * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
      */
     public function create()
     {
@@ -50,17 +51,19 @@ class CharacterController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
+     * @return \Illuminate\Http\Response
      */
     public function show(Character $character)
     {
         $data = config("db_partials", "dbPartials");
-        return view('admin.characters.show', compact('character', 'data'));
+        return view('characters.show' , compact ('character' ,'data'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
+     * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
@@ -72,18 +75,18 @@ class CharacterController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
+     * @return \Illuminate\Http\Response
      */
-    public function update(UpdateCharacterRequest $request, Character $character)
+    public function update(Request $request, $id)
     {
-        $form_data = $request->validated();
-        $character->update($form_data);
-        return redirect()->route('admin.characters.show', $character->id)->with('message', "Il personaggio {$character->title} è stato modificato con successo");
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
+     * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
@@ -93,9 +96,10 @@ class CharacterController extends Controller
     public function indexOrder($order)
     {
         $data = config("db_partials", "dbPartials");
-        if ($order === "name") {
+        if($order === "name") {
             $characters = Character::orderBy($order, "asc")->get();
-        } else {
+        }
+        else {
             $characters = Character::orderBy($order, "desc")->get();
         }
         return view('home', compact('characters', 'data'));
