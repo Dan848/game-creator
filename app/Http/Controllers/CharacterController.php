@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Character;
 
-class CharactersController extends Controller
+class CharacterController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -56,7 +56,7 @@ class CharactersController extends Controller
     public function show(Character $character)
     {
         $data = config("db_partials", "dbPartials");
-        return view('characters.show' , compact ('character' ,'data'));
+        return view('characters.show', compact('character', 'data'));
     }
 
     /**
@@ -96,10 +96,9 @@ class CharactersController extends Controller
     public function indexOrder($order)
     {
         $data = config("db_partials", "dbPartials");
-        if($order === "name") {
+        if ($order === "name") {
             $characters = Character::orderBy($order, "asc")->get();
-        }
-        else {
+        } else {
             $characters = Character::orderBy($order, "desc")->get();
         }
         return view('home', compact('characters', 'data'));
