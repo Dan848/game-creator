@@ -1,8 +1,8 @@
-@extends('layouts.app');
+@extends('layouts.app')
 
-@section('main_content')
+@section('content')
     <section class="container my-4">
-        <form class="text-light" action="{{route('characters.store')}}" method="POST">
+        <form class="text-black" action="{{ route('admin.characters.store') }}" method="POST">
             @csrf
 
             <div class="mb-3">

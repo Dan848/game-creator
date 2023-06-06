@@ -6,7 +6,9 @@
 
 @section('content')
     <div class="container">
+        <a href="{{ route('admin.characters.create') }}" class="btn btn-primary">Crea il tuo personaggio</a>
         <div class="row">
+
             @foreach ($characters as $character)
                 <div class="col-12 col-md-4 g-5">
                     <div class="card">
@@ -14,7 +16,8 @@
                             <h3>
                                 {{ $character['name'] }}
                             </h3>
-                            <a href="{{ route('admin.characters.show', $character->id) }}" class="info-box rounded-3 text-center text-white">
+                            <a href="{{ route('admin.characters.show', $character->id) }}"
+                                class="info-box rounded-3 text-center text-white">
                                 <i class="fa-solid fa-info"></i>
                             </a>
                         </div>
