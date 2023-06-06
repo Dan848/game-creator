@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Character;
+use App\Http\Requests\StoreCharacterRequest;
+use App\Http\Requests\UpdateCharacterRequest;
 
 class CharacterController extends Controller
 {
@@ -71,9 +73,9 @@ class CharacterController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      */
-    public function update(Request $request, Character $character)
+    public function update(UpdateCharacterRequest $request, Character $character)
     {
-        $form_data = $request->all();
+        $form_data = $request->validated();
         $character->update($form_data);
         return redirect()->route('admin.characters.show', $character->id)->with('message', "Il personaggio {$character->title} è stato modificato con successo");
     }
