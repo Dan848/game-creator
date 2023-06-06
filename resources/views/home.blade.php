@@ -4,7 +4,7 @@
     Home
 @endsection
 
-@section('content')
+@section('main_content')
     <div class="container">
         <div class="row">
             @foreach ($characters as $character)
@@ -14,7 +14,7 @@
                             <h3>
                                 {{ $character['name'] }}
                             </h3>
-                            <a href="{{ route('admin.characters.show', $character->id) }}" class="info-box rounded-3 text-center text-white">
+                            <a href="{{ route('characters.show', $character->id) }}" class="info-box rounded-3 text-center text-white">
                                 <i class="fa-solid fa-info"></i>
                             </a>
                         </div>
