@@ -18,18 +18,17 @@ class CharacterController extends Controller
     {
         $data = config("db_partials", "dbPartials");
         $characters = Character::all();
-        return view('home', compact('characters', 'data'));
+        return view('admin.characters.index', compact('characters', 'data'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
      */
     public function create()
     {
         $data = config("db_partials", "dbPartials");
-        return view('characters.create', compact('data'));
+        return view('admin.characters.create', compact('data'));
     }
 
     /**
@@ -39,13 +38,11 @@ class CharacterController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function store(Request $request)
+    public function store(StoreCharacterRequest $request)
     {
-        $form_data = $request->all();
-        $newCharacter = new Character();
-        $newCharacter->fill($form_data);
-        $newCharacter->save();
-        return redirect()->route('characters.show', $newCharacter->id);
+        $form_data = $request->validated();
+        $newCharacter = Character::create($form_data);
+        return redirect()->route('admin.characters.show', $newCharacter->id);
     }
 
     /**
@@ -57,7 +54,7 @@ class CharacterController extends Controller
     public function show(Character $character)
     {
         $data = config("db_partials", "dbPartials");
-        return view('characters.show', compact('character', 'data'));
+        return view('admin.characters.show', compact('character', 'data'));
     }
 
     /**
@@ -87,11 +84,11 @@ class CharacterController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Character $character)
     {
-        //
+        $character->delete();
+        return redirect()->route('admin.characters.index')->with('message', 'Hai eliminato con successo ');
     }
 
     public function indexOrder($order)
