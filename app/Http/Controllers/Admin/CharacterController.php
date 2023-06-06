@@ -18,7 +18,7 @@ class CharacterController extends Controller
     {
         $data = config("db_partials", "dbPartials");
         $characters = Character::all();
-        return view('home', compact('characters', 'data'));
+        return view('admin.characters.index', compact('characters', 'data'));
     }
 
     /**
@@ -57,7 +57,7 @@ class CharacterController extends Controller
     public function show(Character $character)
     {
         $data = config("db_partials", "dbPartials");
-        return view('characters.show', compact('character', 'data'));
+        return view('admin.characters.show', compact('character', 'data'));
     }
 
     /**
