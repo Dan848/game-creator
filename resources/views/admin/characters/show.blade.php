@@ -4,7 +4,7 @@
     {{ $character['name'] }}
 @endsection
 
-@section('main_content')
+@section('content')
     <div class="container d-flex my-5 justify-content-center">
         <div class="info me-5">
             <h1 class="pb-3">{{ $character['name'] }}</h1>

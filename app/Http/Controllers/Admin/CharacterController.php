@@ -57,7 +57,7 @@ class CharacterController extends Controller
     public function show(Character $character)
     {
         $data = config("db_partials", "dbPartials");
-        return view('characters.show', compact('character', 'data'));
+        return view('admin.characters.show', compact('character', 'data'));
     }
 
     /**
