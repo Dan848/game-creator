@@ -64,7 +64,7 @@ class StoreCharacterRequest extends FormRequest
             'life.numeric' => "Il campo 'vita' deve essere un numero",
             'life.min' => "Il campo 'vita' deve essere almeno :min",
             'life.max' => "Il campo 'vita' non può superare :max",
-            'type_id' => "Il campo 'Classe' non può superare :max"
+            'type_id' => "Il campo 'Classe' è obligatorio"
         ];
     }
 }
