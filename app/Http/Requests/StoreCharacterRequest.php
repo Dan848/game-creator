@@ -24,13 +24,15 @@ class StoreCharacterRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required', 'max:200', 'min:2'],
+            'name' => ['required', 'unique:characters', 'max:200', 'min:2'],
             'description' => ['required'],
-            'attack' => ['required', 'numeric', 'min:0', 'max:15' ],
-            'defence' => ['required','numeric', 'min:0', 'max:15'],
-            'speed' => ['required','numeric', 'min:0', 'max:15'],
-            'intelligence' => ['required','numeric', 'min:0', 'max:15'],
-            'life' => ['required','numeric', 'min:70', 'max:120'],
+            'strength' => ['required', 'numeric', 'min:0', 'max:15'],
+            'defence' => ['required', 'numeric', 'min:0', 'max:15'],
+            'speed' => ['required', 'numeric', 'min:0', 'max:15'],
+            'intelligence' => ['required', 'numeric', 'min:0', 'max:15'],
+            'life' => ['required', 'numeric', 'min:70', 'max:120'],
+            'type_id' => ['required']
+
         ];
     }
 
@@ -38,13 +40,14 @@ class StoreCharacterRequest extends FormRequest
     {
         return [
             'name.required' => "Il campo 'nome' è obbligatorio",
+            'name.unique' => "Il Nome inserito è già stato utilizzato.",
             'name.min' => "Il campo 'nome' deve contenere almeno :min caratteri",
             'name.max' => "Il campo 'nome' deve contenere al massimo :max caratteri",
             'description.required' => "Il campo 'descrizione' è obbligatorio",
-            'attack.required' => "Il campo 'attacco' è obbligatorio",
-            'attack.numeric' => "Il campo 'attacco' deve essere un numero",
-            'attack.min' => "Il campo 'attacco' deve essere almeno :min",
-            'attack.max' => "Il campo 'attacco' non può superare :max",
+            'strength.required' => "Il campo 'forza' è obbligatorio",
+            'strength.numeric' => "Il campo 'forza' deve essere un numero",
+            'strength.min' => "Il campo 'forza' deve essere almeno :min",
+            'strength.max' => "Il campo 'forza' non può superare :max",
             'defence.required' => "Il campo 'difesa' è obbligatorio",
             'defence.numeric' => "Il campo 'difesa' deve essere un numero",
             'defence.min' => "Il campo 'difesa' deve essere almeno :min",
@@ -61,6 +64,7 @@ class StoreCharacterRequest extends FormRequest
             'life.numeric' => "Il campo 'vita' deve essere un numero",
             'life.min' => "Il campo 'vita' deve essere almeno :min",
             'life.max' => "Il campo 'vita' non può superare :max",
+            'type_id' => "Il campo 'Classe' non può superare :max"
         ];
     }
 }

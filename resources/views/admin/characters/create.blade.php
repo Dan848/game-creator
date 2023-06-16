@@ -30,6 +30,9 @@
                             @error('strength')
                                 <p>*{{ $message }}</p>
                             @enderror
+                            @error('description')
+                                <p>*{{ $message }}</p>
+                            @enderror
                             @error('intelligence')
                                 <p>*{{ $message }}</p>
                             @enderror
@@ -133,6 +136,11 @@
                             </select>
                             <label for="floatingSelect">Classe</label>
                         </div>
+                    </div>
+                    <!-- DESCRIPTIONS -->
+                    <div class="form-floating mb-3">
+                        <textarea id="type" name="description" class="form-control" id="description" rows="5">{{ old('description') }}</textarea>
+                        <label for="description">Descrizione</label>
                     </div>
 
                     <!-- ITEMS -->
