@@ -1,5 +1,8 @@
 @extends('layouts.admin')
 
+@section('title')
+    Modifica {{ $character->name }}
+@endsection
 
 @section('content')
     <section class="container my-4">

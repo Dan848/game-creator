@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
-@section('page_title')
-    {{ $character['name'] }}
+@section('title')
+    {{ $character->name }}
 @endsection
 
 @section('content')

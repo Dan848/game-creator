@@ -1,5 +1,9 @@
 @extends('layouts.admin')
 
+@section('title')
+    Nuovo Oggetto
+@endsection
+
 @section('content')
     <div class="container mb-5">
         <h2 class="mt-5 mb-4 text-center">
@@ -92,7 +96,8 @@
                         </div>
                     </div>
                     <div class="form-floating mb-3">
-                        <textarea id="description" name="description" class="form-control" id="description" rows="5">{{ old('description') }}</textarea>
+                        <textarea name="description" class="form-control @error('description') is-invalid @enderror" id="description"
+                            rows="5">{{ old('description') }}</textarea>
                         <label for="description">Descrizione</label>
                     </div>
                     <!-- SAVE & RESET -->

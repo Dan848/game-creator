@@ -1,33 +1,73 @@
 @extends('layouts.admin')
 
+@section('title')
+    Modifica {{ $type->name }}
+@endsection
 
 @section('content')
-    <section class="container my-4">
-        <h2>Modifica la tua classe </h2>
-        <form class="text-dark" action="{{ route('admin.characters.update', $character->id) }}" method="POST">
-            @csrf
-            @method('PUT')
-            {{-- Errors Section --}}
-            @if ($errors->any())
-                <div class="alert alert-danger mt-2">
-                    @error('name')
-                        <p>*{{ $message }}</p>
-                    @enderror
-                    @error('description')
-                        <p>*{{ $message }}</p>
-                    @enderror
-                </div>
-            @endif
-            <div class="mb-3">
-                <label for="name" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="name" name="name" value="{{ $item->name }}">
+    <div class="container mb-5">
+        <h2 class="mt-5 mb-4 text-center">
+            Modifica {{ $type->name }}
+        </h2>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('admin.types.index') }}">Classi</a></li>
+            <li class="breadcrumb-item active">Modifica {{ $type->name }}</li>
+        </ol>
+    </div>
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col">
+                <form class="container form-crud" method="POST" action="{{ route('admin.types.update') }}"
+                    enctype="multipart/form-data">
+                    @method('PUT')
+                    @csrf
+                    {{-- Errors Section --}}
+                    @if ($errors->any())
+                        <div class="alert alert-danger mt-2">
+                            @error('name')
+                                <p>*{{ $message }}</p>
+                            @enderror
+                            @error('image')
+                                <p>*{{ $message }}</p>
+                            @enderror
+                            @error('description')
+                                <p>*{{ $message }}</p>
+                            @enderror
+                        </div>
+                    @endif
+                    <!-- NAME/IMAGE -->
+                    <div class="row">
+                        <!-- NAME -->
+                        <div class="col-12 col-md-6">
+                            <div class="form-floating mb-3">
+                                <input id="name" type="text"
+                                    class="form-control @error('name') is-invalid @enderror" name="name"
+                                    value="{{ $type->name }}" required autofocus>
+                                <label for="name">Nome</label>
+                            </div>
+                        </div>
+                        <!-- IMAGE -->
+                        <div class="col-12 col-md-6">
+                            <div class="form-floating mb-3">
+                                <input id="image" type="file"
+                                    class="form-control @error('image') is-invalid @enderror" name="image" autofocus>
+                                <label class="mb-5" for="image">Immagine</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea id="description" name="description" class="form-control @error('description') is-invalid @enderror"
+                            rows="5">{{ $type->description }}</textarea>
+                        <label for="description">Descrizione</label>
+                    </div>
+                    <!-- SAVE & RESET -->
+                    <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
+                        <button class="btn btn-secondary me-2" type="reset">Reset</button>
+                        <button class="btn btn-primary ms-2" type="submit">Modifica</button>
+                    </div>
+                </form>
             </div>
-            <div class="mb-3">
-                <label for="description" class="form-label">Descrizione</label>
-                <textarea class="form-control" id="description" name="description" rows="4" cols="50">{{ $item->description }}</textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Modifica</button>
-            <button type="reset" class="btn btn-primary">Reset</button>
-        </form>
-    </section>
+        </div>
+    </div>
 @endsection

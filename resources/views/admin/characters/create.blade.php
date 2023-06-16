@@ -1,5 +1,9 @@
 @extends('layouts.admin')
 
+@section('title')
+    Nuovo Personaggio
+@endsection
+
 @section('content')
     <div class="container mb-5">
         <h2 class="mt-5 mb-4 text-center">

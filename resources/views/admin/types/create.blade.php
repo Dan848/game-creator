@@ -1,5 +1,9 @@
 @extends('layouts.admin')
 
+@section('title')
+    Nuova Classe
+@endsection
+
 @section('content')
     <div class="container mb-5">
         <h2 class="mt-5 mb-4 text-center">
@@ -14,7 +18,7 @@
     <div class="container mb-4">
         <div class="row">
             <div class="col">
-                <form class="container form-crud" method="POST" action="{{ route('admin.characters.store') }}"
+                <form class="container form-crud" method="POST" action="{{ route('admin.types.store') }}"
                     enctype="multipart/form-data">
                     @csrf
                     {{-- Errors Section --}}
@@ -52,7 +56,8 @@
                         </div>
                     </div>
                     <div class="form-floating mb-3">
-                        <textarea id="description" name="description" class="form-control" rows="5">{{ old('description') }}</textarea>
+                        <textarea id="description" name="description" class="form-control @error('description') is-invalid @enderror"
+                            rows="5">{{ old('description') }}</textarea>
                         <label for="description">Descrizione</label>
                     </div>
                     <!-- SAVE & RESET -->

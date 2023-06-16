@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
-@section('page_title')
-    {{ $type['name'] }}
+@section('title')
+    {{ $type->name }}
 @endsection
 
 @section('content')
@@ -18,8 +18,8 @@
 
                 @csrf
                 @method('DELETE')
-                <button class="delete-button btn-warning btn"><a
-                        href="{{ route('admin.types.edit', $type->id) }}"><i class="fa-solid fa-pencil"></i></a>
+                <button class="delete-button btn-warning btn"><a href="{{ route('admin.types.edit', $type->id) }}"><i
+                            class="fa-solid fa-pencil"></i></a>
                 </button>
                 <button type='submit' class="delete-button btn-danger btn" data-item-title="{{ $type->name }}"> <i
                         class="fa-solid  fa-trash"></i></button>
