@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <div class="form-floating mb-3">
-                        <textarea id="description" name="description" class="form-control" id="floatingTextarea" rows="5">{{ old('description') }}</textarea>
+                        <textarea id="description" name="description" class="form-control" rows="5">{{ old('description') }}</textarea>
                         <label for="description">Descrizione</label>
                     </div>
                     <!-- SAVE & RESET -->
