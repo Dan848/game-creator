@@ -1,0 +1,38 @@
+name,slug,type,category,weight,cost,damage_dice
+Club,club,Weapons,Simple Melee Weapons,2 lb.,1 sp,1d4
+Dagger,dagger,Weapons,Simple Melee Weapons,1 lb.,2 gp,1d4
+Greatclub,greatclub,Weapons,Simple Melee Weapons,10 lb.,2 sp,1d8
+Handaxe,handaxe,Weapons,Simple Melee Weapons,2 lb.,5 gp,1d6
+Javelin,javelin,Weapons,Simple Melee Weapons,2 lb.,5 sp,1d6
+Light hammer,light-hammer,Weapons,Simple Melee Weapons,2 lb.,2 gp,1d4
+Mace,mace,Weapons,Simple Melee Weapons,4 lb.,5 gp,1d6
+Quarterstaff,quarterstaff,Weapons,Simple Melee Weapons,4 lb.,2 sp,1d6
+Sickle,sickle,Weapons,Simple Melee Weapons,2 lb.,1 gp,1d4
+Spear,spear,Weapons,Simple Melee Weapons,3 lb.,1 gp,1d6
+"Crossbow, light",crossbow-light,Weapons,Simple Ranged Weapons,5 lb.,25 gp,1d8
+Dart,dart,Weapons,Simple Ranged Weapons,0.25 lb.,5 cp,1d4
+Shortbow,shortbow,Weapons,Simple Ranged Weapons,2 lb.,25 gp,1d6
+Sling,sling,Weapons,Simple Ranged Weapons,0 lb.,1 sp,1d4
+Battleaxe,battleaxe,Weapons,Martial Melee Weapons,4 lb.,10 gp,1d8
+Flail,flail,Weapons,Martial Melee Weapons,2 lb.,10 gp,1d8
+Glaive,glaive,Weapons,Martial Melee Weapons,6 lb.,20 gp,1d10
+Greataxe,greataxe,Weapons,Martial Melee Weapons,7 lb.,30 gp,1d12
+Greatsword,greatsword,Weapons,Martial Melee Weapons,6 lb.,50 gp,2d6
+Halberd,halberd,Weapons,Martial Melee Weapons,6 lb.,20 gp,1d10
+Lance,lance,Weapons,Martial Melee Weapons,6 lb.,10 gp,1d12
+Longsword,longsword,Weapons,Martial Melee Weapons,3 lb.,15 gp,1d8
+Maul,maul,Weapons,Martial Melee Weapons,10 lb.,10 gp,2d6
+Morningstar,morningstar,Weapons,Martial Melee Weapons,4 lb.,15 gp,1d8
+Pike,pike,Weapons,Martial Melee Weapons,18 lb.,5 gp,1d10
+Rapier,rapier,Weapons,Martial Melee Weapons,2 lb.,25 gp,1d8
+Scimitar,scimitar,Weapons,Martial Melee Weapons,3 lb.,25 gp,1d6
+Shortsword,shortsword,Weapons,Martial Melee Weapons,2 lb.,10 gp,1d6
+Trident,trident,Weapons,Martial Melee Weapons,4 lb.,5 gp,1d6
+War pick,war-pick,Weapons,Martial Melee Weapons,2 lb.,5 gp,1d8
+Warhammer,warhammer,Weapons,Martial Melee Weapons,2 lb.,15 gp,1d8
+Whip,whip,Weapons,Martial Melee Weapons,3 lb.,2 gp,1d4
+Blowgun,blowgun,Weapons,Martial Ranged Weapons,1 lb.,10 gp,1
+"Crossbow, hand",crossbow-hand,Weapons,Martial Ranged Weapons,3 lb.,75 gp,1d6
+"Crossbow, heavy",crossbow-heavy,Weapons,Martial Ranged Weapons,18 lb.,50 gp,1d10
+Longbow,longbow,Weapons,Martial Ranged Weapons,2 lb.,50 gp,1d8
+Net,net,Weapons,Martial Ranged Weapons,3 lb.,1 gp,0
