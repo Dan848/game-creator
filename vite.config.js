@@ -15,7 +15,6 @@ export default defineConfig({
     // Add resolve object and aliases
     resolve: {
         alias: {
-
             '~@fortawesome': path.resolve(__dirname, 'node_modules/@fortawesome'),
             '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
             '~resources': '/resources/'

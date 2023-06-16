@@ -5,8 +5,12 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Character;
+use App\Models\Type;
+use App\Models\Item;
 use App\Http\Requests\StoreCharacterRequest;
 use App\Http\Requests\UpdateCharacterRequest;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class CharacterController extends Controller
 {
@@ -16,9 +20,8 @@ class CharacterController extends Controller
 
     public function index()
     {
-        $data = config("db_partials", "dbPartials");
-        $characters = Character::all();
-        return view('home', compact('characters', 'data'));
+        $characters = Character::paginate(5);
+        return view('admin.characters.index', compact('characters'));
     }
 
     /**
@@ -26,8 +29,9 @@ class CharacterController extends Controller
      */
     public function create()
     {
-        $data = config("db_partials", "dbPartials");
-        return view('characters.create', compact('data'));
+        $types = Type::all();
+        $items = Item::all();
+        return view('admin.characters.create', compact('types', 'items'));
     }
 
     /**
@@ -37,13 +41,23 @@ class CharacterController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function store(Request $request)
+    public function store(StoreCharacterRequest $request)
     {
-        $form_data = $request->all();
-        $newCharacter = new Character();
-        $newCharacter->fill($form_data);
-        $newCharacter->save();
-        return redirect()->route('characters.show', $newCharacter->id);
+        $data = $request->validated();
+        //Add Slug
+        $data["slug"] = Str::slug($request->name, "-");
+        //Store Image
+        if($request->hasFile("image")){
+            $img_path = Storage::put ("uploads", $request->image);
+            $data["image"] = asset("storage/" . $img_path);
+        }
+        $newCharacter = Character::create($data);
+
+            //Attach Foreign data from another table
+            if ($request->has("items")){
+                $newCharacter->items()->attach($request->items);
+            }
+        return redirect()->route('admin.characters.show', $newCharacter->slug);
     }
 
     /**
@@ -53,8 +67,7 @@ class CharacterController extends Controller
      */
     public function show(Character $character)
     {
-        $data = config("db_partials", "dbPartials");
-        return view('admin.characters.show', compact('character', 'data'));
+        return view('admin.characters.show', compact('character'));
     }
 
     /**
@@ -62,9 +75,11 @@ class CharacterController extends Controller
      *
      * @param  int  $id
      */
-    public function edit($id)
+    public function edit(Character $character)
     {
-        //
+        $types = Type::all();
+        $items = Item::all();
+        return view('admin.characters.edit', compact('character', 'types', 'items'));
     }
 
     /**
@@ -75,9 +90,26 @@ class CharacterController extends Controller
      */
     public function update(UpdateCharacterRequest $request, Character $character)
     {
-        $form_data = $request->validated();
-        $character->update($form_data);
-        return redirect()->route('admin.characters.show', $character->id)->with('message', "Il personaggio {$character->title} è stato modificato con successo");
+        $data = $request->validated();
+        $data["slug"] = Str::slug($request->name, "-");
+
+        if ($request->hasFile("image")){
+            if ($character->image) {
+                Storage::delete($character->image);
+            }
+            $img_path = Storage::put("uploads", $request->image);
+            $data["image"] = asset("storage/" . $img_path);
+        }
+        $character->update($data);
+
+            //Attach Foreign data from another table
+            if ($request->has("items")){
+                $character->items()->sync($request->items);
+            }
+            else {
+                $character->sync([]);
+            }
+        return redirect()->route("admin.characters.show",$character->slug)->with("message", "$character->name è stato modificato con successo");
     }
 
     /**
@@ -85,9 +117,13 @@ class CharacterController extends Controller
      *
      * @param  int  $id
      */
-    public function destroy($id)
+    public function destroy(Character $character)
     {
-        //
+        if ($character->image) {
+            Storage::delete($character->image);
+        }
+        $character->delete();
+        return redirect()->route("admin.characters.index")->with("message", "$character->name è stato eliminato con successo");
     }
 
     public function indexOrder($order)
