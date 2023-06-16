@@ -27,11 +27,12 @@ class UpdateCharacterRequest extends FormRequest
         return [
             'name' => ['required', Rule::unique('characters')->ignore($this->character), 'max:200', 'min:2'],
             'description' => ['required'],
-            'attack' => ['required', 'numeric', 'min:0', 'max:15' ],
+            'strength' => ['required', 'numeric', 'min:0', 'max:15' ],
             'defence' => ['required','numeric', 'min:0', 'max:15'],
             'speed' => ['required','numeric', 'min:0', 'max:15'],
             'intelligence' => ['required','numeric', 'min:0', 'max:15'],
             'life' => ['required','numeric', 'min:70', 'max:120'],
+            'type_id' => ['required'],
         ];
     }
 
@@ -63,6 +64,7 @@ class UpdateCharacterRequest extends FormRequest
             'life.numeric' => "Il campo 'vita' deve essere un numero",
             'life.min' => "Il campo 'vita' deve essere almeno :min",
             'life.max' => "Il campo 'vita' non può superare :max",
+            'type_id.required' => 'Il campo classe è obbligatorio',
         ];
     }
 }
