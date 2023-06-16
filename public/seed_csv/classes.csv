@@ -1,5 +1,5 @@
-name,desc
-Barbarian,"### Rage 
+name,Image,desc
+Barbarian,/img/character/barbarian.gif,"### Rage 
  
 In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. 
  
@@ -74,7 +74,7 @@ Beginning at 18th level, if your total for a Strength check is less than your St
 ### Primal Champion 
  
 At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24."
-Bard,"### Spellcasting 
+Bard,/img/character/bard.gif,"### Spellcasting 
  
 You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. 
  
@@ -169,7 +169,7 @@ You learn two additional spells from any class at 14th level and again at 18th l
 ### Superior Inspiration 
  
 At 20th level, when you roll initiative and have no uses of Bardic Inspiration left, you regain one use."
-Cleric,"### Spellcasting 
+Cleric,/img/character/cleric.gif,"### Spellcasting 
  
 As a conduit for divine power, you can cast cleric spells. 
  
@@ -259,7 +259,7 @@ Imploring your deity's aid requires you to use your action. Describe the assista
 If your deity intervenes, you can't use this feature again for 7 days. Otherwise, you can use it again after you finish a long rest. 
  
 At 20th level, your call for intervention succeeds automatically, no roll required."
-Druid,"### Druidic 
+Druid,/img/character/druid.gif,"### Druidic 
  
 You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic. 
  
@@ -342,7 +342,7 @@ Beginning at 18th level, you can cast many of your druid spells in any shape you
 At 20th level, you can use your Wild Shape an unlimited number of times. 
  
 Additionally, you can ignore the verbal and somatic components of your druid spells, as well as any material components that lack a cost and aren't consumed by a spell. You gain this benefit in both your normal shape and your beast shape from Wild Shape."
-Fighter,"### Fighting Style 
+Fighter,/img/character/fighter.gif,"### Fighting Style 
  
 You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again. 
  
@@ -403,7 +403,7 @@ You can use this feature twice between long rests starting at 13th level and thr
 ### Martial Archetypes 
  
 Different fighters choose different approaches to perfecting their fighting prowess. The martial archetype you choose to emulate reflects your approach."
-Monk,"### Unarmored Defense 
+Monk,/img/character/monk.gif,"### Unarmored Defense 
  
 Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier. 
  
@@ -518,7 +518,7 @@ At 20th level, when you roll for initiative and have no ki points remaining, you
 ### Monastic Traditions 
  
 Three traditions of monastic pursuit are common in the monasteries scattered across the multiverse. Most monasteries practice one tradition exclusively, but a few honor the three traditions and instruct each monk according to his or her aptitude and interest. All three traditions rely on the same basic techniques, diverging as the student grows more adept. Thus, a monk need choose a tradition only upon reaching 3rd level."
-Paladin,"### Divine Sense 
+Paladin,/img/character/paladin.gif,"### Divine Sense 
  
 The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you can open your awareness to detect such forces. Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover. You know the type (celestial, fiend, or undead) of any being whose presence you sense, but not its identity (the vampire 
  
@@ -650,7 +650,7 @@ Becoming a paladin involves taking vows that commit the paladin to the cause of 
 > A paladin who has broken a vow typically seeks absolution from a cleric who shares his or her faith or from another paladin of the same order. The paladin might spend an all- night vigil in prayer as a sign of penitence, or undertake a fast or similar act of self-denial. After a rite of confession and forgiveness, the paladin starts fresh. 
 > 
 > If a paladin willfully violates his or her oath and shows no sign of repentance, the consequences can be more serious. At the GM's discretion, an impenitent paladin might be forced to abandon this class and adopt another."
-Ranger,"### Favored Enemy 
+Ranger,/img/character/ranger.gif,"### Favored Enemy 
  
 Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy. 
  
@@ -763,7 +763,7 @@ You are also aware of the location of any invisible creature within 30 feet of y
 ### Foe Slayer 
  
 At 20th level, you become an unparalleled hunter of your enemies. Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make against one of your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are applied."
-Rogue,"### Expertise 
+Rogue,/img/character/rogue.gif,"### Expertise 
  
 At 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with thieves' tools. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies. 
  
@@ -828,7 +828,7 @@ Once you use this feature, you can't use it again until you finish a short or lo
 ### Roguish Archetypes 
  
 Rogues have many features in common, including their emphasis on perfecting their skills, their precise and deadly approach to combat, and their increasingly quick reflexes. But different rogues steer those talents in varying directions, embodied by the rogue archetypes. Your choice of archetype is a reflection of your focus-not necessarily an indication of your chosen profession, but a description of your preferred techniques."
-Sorcerer,"### Spellcasting 
+Sorcerer,/img/character/sorcerer.gif,"### Spellcasting 
  
 An event in your past, or in the life of a parent or ancestor, left an indelible mark on you, infusing you with arcane magic. This font of magic, whatever its origin, fuels your spells. 
  
@@ -951,7 +951,7 @@ At 20th level, you regain 4 expended sorcery points whenever you finish a short 
 ### Sorcerous Origins 
  
 Different sorcerers claim different origins for their innate magic. Although many variations exist, most of these origins fall into two categories: a draconic bloodline and wild magic."
-Warlock,"### Otherworldly Patron 
+Warlock,/img/character/warlock.gif,"### Otherworldly Patron 
  
 At 1st level, you have struck a bargain with an otherworldly being of your choice: the Archfey, the Fiend, or the Great Old One, each of which is detailed at the end of the class description. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level. 
  
@@ -1220,7 +1220,7 @@ You can see the true form of any shapechanger or creature concealed by illusion 
 The beings that serve as patrons for warlocks are mighty inhabitants of other planes of existence-not gods, but almost godlike in their power. Various patrons give their warlocks access to different powers and invocations, and expect significant favors in return. 
  
 Some patrons collect warlocks, doling out mystic knowledge relatively freely or boasting of their ability to bind mortals to their will. Other patrons bestow their power only grudgingly, and might make a pact with only one warlock. Warlocks who serve the same patron might view each other as allies, siblings, or rivals."
-Wizard,"### Spellcasting 
+Wizard,/img/character/wizard.gif,"### Spellcasting 
  
 As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power. 
  

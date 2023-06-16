@@ -23,7 +23,8 @@ class TypeSeeder extends Seeder
                     $newType = new Type;
                     $newType->name = $data[0];
                     $newType->slug = Str::slug($newType->name, "-");
-                    $newType->description = $data[1];
+                    $newType->image = $data[1];
+                    $newType->description = $data[2];
                     $newType->save();
                 }
                 $index++;
