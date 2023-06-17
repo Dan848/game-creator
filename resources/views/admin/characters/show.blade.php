@@ -33,46 +33,48 @@
                     alt="{{ $character->name }}" class="object-fit-contain w-75" />
             </div>
             <div class="box-info col-12 col-lg-6">
+                {{-- STATS --}}
                 <h3 class="text-uppercase text-secondary d-flex justify-content-center">
                     Statistiche
                 </h3>
                 <hr />
+                {{-- STRENGTH --}}
                 <p class="d-flex justify-content-between">
                     <span class="pixel-text">Forza:</span>
-
                     <span class="fw-bold"> {{ $character->strength }}</span>
                 </p>
                 <hr />
+                {{-- DEFENCE --}}
                 <p class="d-flex justify-content-between">
                     <span class="pixel-text"> Difesa:</span>
-
                     <span class="fw-bold"> {{ $character->defence }}</span>
                 </p>
                 <hr />
+                {{-- INTELLIGENCE --}}
                 <p class="d-flex justify-content-between">
                     <span class="pixel-text">Intelligenza:</span>
-
                     <span class="fw-bold"> {{ $character->intelligence }}</span>
                 </p>
                 <hr />
+                {{-- SPEED --}}
                 <p class="d-flex justify-content-between">
                     <span class="pixel-text">Velocità:</span>
-
                     <span class="fw-bold"> {{ $character->speed }}</span>
                 </p>
                 <hr />
+                {{-- LIFE --}}
                 <p class="d-flex justify-content-between">
                     <span class="pixel-text"> Vita:</span>
-
                     <span class="fw-bold"> {{ $character->life }}</span>
                 </p>
                 <hr />
+                {{-- CLASS/TYPE --}}
                 <p class="d-flex justify-content-between">
                     <span class="pixel-text">Classe</span>
                     <span class="fw-bold">{{ $character->type->name }}</span>
                 </p>
                 <hr />
-                <!-- IN ATTESA CHE VENGAO SEEDATI GLI ITEM -->
+                {{-- INVENTORY --}}
                 <div>
                     <p class="text-center text-secondary">Inventario:</p>
                     @foreach ($character->items as $item)
@@ -87,6 +89,7 @@
                 </div>
                 <hr />
             </div>
+            {{-- /STATS --}}
             <p class="p-3 d-flex justify-content-between col-12 flex-column">
                 <span class="text-secondary text-center fs-4 py-3 pixel-text">Descrizione</span>
                 <span class="bm-desc p-3 fst-italic text-capitalize fs-6">
