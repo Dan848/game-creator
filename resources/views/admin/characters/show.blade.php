@@ -5,46 +5,69 @@
 @endsection
 
 @section('content')
-    <div class="container d-flex my-5 justify-content-center">
-        <div class="info me-5">
-            <h1 class="pb-3">{{ $character['name'] }}</h1>
-            <ul class="text-black list-unstyled">
-                <li>
-                    Attacco: <span class="fw-bold">{{ $character['strength'] }}</span>
-                </li>
-                <li>
-                    Difesa: <span class="fw-bold">{{ $character['defence'] }}</span>
-                </li>
-                <li>
-                    Velocità: <span class="fw-bold">{{ $character['speed'] }}</span>
-                </li>
-                <li>
-                    Intelligenza: <span class="fw-bold">{{ $character['intelligence'] }}</span>
-                </li>
-                <li>
-                    Vita: <span class="fw-bold">{{ $character['life'] }}</span>
-                </li>
-                <li>
-                    Descrizione: <span class="fw-bold">{{ $character['description'] }}</span>
-                </li>
-            </ul>
+    <div class="container text-white mt-5">
+        <div class="box-character row">
+            <div class="box-image justify-content-center d-flex mb-5 mb-lg-0 col-12 col-lg-6">
+                <img src="{{ $character->image ? $character->image : $character->type->image }}" alt="{{ $character->name }}"
+                    class="object-fit-contain w-75" />
+            </div>
+            <div class="box-info col-12 col-lg-6">
+                <h2 class="text-uppercase d-flex justify-content-center">
+                    {{ $character->name }}
+                </h2>
+                <hr />
+                <p class="d-flex justify-content-between">
+                    <span class="pixel-text">Forza:</span>
 
-            <form action="{{ route('admin.characters.destroy', $character) }}" method="POST">
+                    <span class="fw-bold"> {{ $character->strength }}</span>
+                </p>
+                <hr />
+                <p class="d-flex justify-content-between">
+                    <span class="pixel-text"> Difesa:</span>
 
-                @csrf
-                @method('DELETE')
-                <button class="delete-button btn-warning btn"><a
-                        href="{{ route('admin.characters.edit', $character->id) }}"><i class="fa-solid fa-pencil"></i></a>
-                </button>
-                <button type='submit' class="delete-button btn-danger btn" data-item-title="{{ $character->name }}"> <i
-                        class="fa-solid  fa-trash"></i></button>
+                    <span class="fw-bold"> {{ $character->defence }}</span>
+                </p>
+                <hr />
+                <p class="d-flex justify-content-between">
+                    <span class="pixel-text">Intelligenza:</span>
 
-            </form>
+                    <span class="fw-bold"> {{ $character->intelligence }}</span>
+                </p>
+                <hr />
+                <p class="d-flex justify-content-between">
+                    <span class="pixel-text">Velocità:</span>
+
+                    <span class="fw-bold"> {{ $character->speed }}</span>
+                </p>
+                <hr />
+                <p class="d-flex justify-content-between">
+                    <span class="pixel-text"> Vita:</span>
+
+                    <span class="fw-bold"> {{ $character->life }}</span>
+                </p>
+                <hr />
+                <p class="d-flex justify-content-between">
+                    <span class="pixel-text">Classe</span>
+                    <span class="fw-bold">{{ $character->type->name }}</span>
+                </p>
+                <hr />
+                <!-- IN ATTESA CHE VENGAO SEEDATI GLI ITEM -->
+                <!-- <p class="d-flex justify-content-between">
+                                                                                                                    <span class="pixel-text"> Arma</span>
+                                                                                                                    <span class="fw-bold"> $character->items->name </span>
+                                                                                                                  </p>
+                                                                                                                  <hr /> -->
+            </div>
+            <p class="p-3 d-flex justify-content-between col-12 flex-column">
+                <span class="text-secondary text-center fs-4 py-3 pixel-text">Descrizione</span>
+                <span class="bm-desc p-3 fw-bold text-capitalize fs-6">{{ $character->description }}</span>
+            </p>
         </div>
-        <div class="image-character-show">
 
-            <img src="https://cdn.vox-cdn.com/thumbor/TMjYvNH-wm9yE2CcRbhL6b0Sv8w=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22701491/boh.jpg"
-                alt="{{ $character['name'] }}" class="img-fluid">
+        <div class="d-flex justify-content-start w-100 mt-4 ms-5">
+            <a class="btn btn-primary text-decoration-none text-center" href="{{ route('admin.characters.index') }}">
+                <i class="fa-sharp fa-solid fa-arrow-left"></i>
+            </a>
         </div>
     </div>
 @endsection
