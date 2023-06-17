@@ -33,7 +33,7 @@
                     alt="{{ $character->name }}" class="object-fit-contain w-75" />
             </div>
             <div class="box-info col-12 col-lg-6">
-                <h3 class="text-uppercase d-flex justify-content-center">
+                <h3 class="text-uppercase text-secondary d-flex justify-content-center">
                     Statistiche
                 </h3>
                 <hr />
@@ -74,7 +74,7 @@
                 <hr />
                 <!-- IN ATTESA CHE VENGAO SEEDATI GLI ITEM -->
                 <div>
-                    <p class="text-center">Inventario:</p>
+                    <p class="text-center text-secondary">Inventario:</p>
                     @foreach ($character->items as $item)
                         @if (!$loop->last)
                             <p>
