@@ -10,7 +10,7 @@
 
             </div>
             <div class="img-box ms-2">
-                <img class="img-fluid" src="/img/logo.png" alt="logo">
+                <img class="img-fluid logo" src="/img/logo.png" alt="logo" >
             </div>
         </div>
     </div>
