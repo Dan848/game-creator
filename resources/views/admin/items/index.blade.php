@@ -32,32 +32,32 @@
                             <tr class="align-middle">
                                 {{-- Name --}}
                                 <th scope="row">
-                                    <a class="h5 text-decoration-none"
-                                        href="{{ route('admin.items.show', $item) }}">{{ $item->name }}
+                                    <a class="h5" href="{{ route('admin.items.show', $item) }}">{{ $item->name }}
                                     </a>
                                 </th>
                                 {{-- Type --}}
                                 <td class="d-none d-sm-table-cell">
-                                    <a class="d-block img-preview">{{ $item->type }}</a>
+                                    <a class="d-block text-white">{{ $item->type }}</a>
                                 </td>
-                                {{-- Life --}}
+                                {{-- Peso --}}
                                 <td class="d-none d-lg-table-cell">{{ $item->weight }}</td>
                                 {{-- Action Button --}}
                                 <td>
                                     <div
                                         class="d-flex gap-2 flex-wrap justify-content-center text-center align-items-center">
 
-                                        <a class="btn btn-light" href="{{ route('admin.items.show', $item->slug) }}">
+                                        <a class="btn btn-success bg-gradient"
+                                            href="{{ route('admin.items.show', $item->slug) }}">
                                             <i class="fa-solid fa-eye"></i>
                                         </a>
-                                        <a class="btn btn-secondary" href="{{ route('admin.items.edit', $item->slug) }}">
+                                        <a class="btn btn-primary" href="{{ route('admin.items.edit', $item->slug) }}">
                                             <i class="fa-solid fa-pencil"></i>
                                         </a>
                                         <form class="m-0 p-0 d-inline-block"
                                             action="{{ route('admin.items.destroy', $item->slug) }}" method="POST">
                                             @method('DELETE')
                                             @csrf
-                                            <button class="btn btn-danger delete-button"
+                                            <button class="btn btn-secondary delete-button"
                                                 data-item-title="{{ $item->name }}" type="submit">
                                                 <i class="fa-solid fa-eraser"></i>
                                             </button>

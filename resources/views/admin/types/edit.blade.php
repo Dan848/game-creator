@@ -15,10 +15,10 @@
             <li class="breadcrumb-item active">Modifica {{ $type->name }}</li>
         </ol>
     </div>
-    <div class="container mb-4">
+    <div class="container p-4 bg-dark rounded-2 mb-4">
         <div class="row">
             <div class="col">
-                <form class="container form-crud" method="POST" action="{{ route('admin.types.update') }}"
+                <form class="container form-crud" method="POST" action="{{ route('admin.types.update', $type) }}"
                     enctype="multipart/form-data">
                     @method('PUT')
                     @csrf

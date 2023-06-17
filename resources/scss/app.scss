@@ -1,6 +1,7 @@
 @use './partials/var' as *;
 
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 $fa-font-path: "../fonts/webfonts" !default;
 
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
@@ -12,17 +13,27 @@ $fa-font-path: "../fonts/webfonts" !default;
 
 
 //GENERAL
+:root{
+    --bs-body-bg: #1d1d1d;
+}
+
 body{
-    &.bg-dark{
-        color: white;
-    }
+
+    color: white;
     font-family: 'Roboto', sans-serif;
-    #layoutSidenav_content{
+
+    background-image: url("/img/background/dnd-pattern-gray.png");
+    background-size: 800px 400px;
+    background-repeat: repeat;
+    background-blend-mode: multiply;
+    background-color: #ffffff!important;
+
+    #layoutSidenav_content,#layoutAuthentication,.bg-pattern{
         background-image: url("/img/background/dnd-pattern-gray.png");
         background-size: 800px 400px;
         background-repeat: repeat;
         background-blend-mode: multiply;
-        background-color: #ffffff;
+        background-color: #ffffff!important;
     }
 }
 
@@ -46,68 +57,6 @@ a{
         transform: scale(1.1);
         backface-visibility: hidden;
     }
-}
-
-.logo{
-    filter: invert(1);
-}
-// CHARACTER INFO Page Style Config
-.info {
-    h1 {
-        color: $secondary;
-    }
-
-    ul {
-        li {
-            padding-bottom: 1rem;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid black;
-
-            span {
-                color: $secondary;
-            }
-        }
-    }
-}
-.character-col {
-    background-image: url('/img/card-bg.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    // Gradient border for card name
-    .card-name-border{
-        border: 10px solid;
-        border-image-slice: 1;
-        border-width: 4px;
-    }
-    .card-name-border-gradient{
-        border-image-source: linear-gradient(90deg, rgba(57, 35, 77, 1) 0%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 60%, rgba(57, 35, 77, 1) 100%);
-    }
-    .image-character-show {
-        max-width: 200px;
-    }
-
-    .image-character-card {
-        height: 2%;
-    }
-    .stats-img {
-        width: 20px;
-        filter: invert(1);
-        margin-right: .5rem;
-    }
-
-    .left-stats {
-        border-right: 2px solid;
-    }
-}
-
-// CHARACTER LIST Page Style Config
-.info-box {
-    display: inline-block;
-    background-color: $primary;
-    width: 30px;
-    height: 30px;
 }
 
 //FORM MODIFY
@@ -147,6 +96,11 @@ a{
     a{
         color: white;
     }
+}
+
+//INDEX
+.img-preview{
+    max-width: 100px;
 }
 
 //Imported CSS

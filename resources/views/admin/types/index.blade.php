@@ -22,7 +22,8 @@
                     <thead>
                         <tr>
                             <th scope="col">Nome</th>
-                            <th class="d-none d-sm-table-cell" scope="col">Personaggi con questa classe</th>
+                            <th class="d-none d-sm-table-cell" scope="col">Immagine</th>
+                            <th class="d-none text-center d-sm-table-cell" scope="col">Personaggi</th>
                             <th class="text-center" scope="col">Azioni</th>
                         </tr>
                     </thead>
@@ -31,30 +32,33 @@
                             <tr class="align-middle">
                                 {{-- Name --}}
                                 <th scope="row">
-                                    <a class="h5 text-decoration-none"
-                                        href="{{ route('admin.types.show', $type) }}">{{ $type->name }}
+                                    <a class="h5" href="{{ route('admin.types.show', $type) }}">{{ $type->name }}
                                     </a>
                                 </th>
-                                {{-- PG With this class --}}
+                                {{-- Image --}}
                                 <td class="d-none d-sm-table-cell">
-                                    <a class="d-block img-preview">{{ $type->characters->count() }}</a>
+                                    <img class="d-block img-preview" src="{{ $type->image }}">
+                                </td>
+                                {{-- PG With this class --}}
+                                <td class="d-none d-sm-table-cell text-center">{{ $type->characters->count() }}
                                 </td>
                                 {{-- Action Button --}}
                                 <td>
                                     <div
                                         class="d-flex gap-2 flex-wrap justify-content-center text-center align-items-center">
 
-                                        <a class="btn btn-light" href="{{ route('admin.types.show', $type->slug) }}">
+                                        <a class="btn btn-success bg-gradient"
+                                            href="{{ route('admin.types.show', $type->slug) }}">
                                             <i class="fa-solid fa-eye"></i>
                                         </a>
-                                        <a class="btn btn-secondary" href="{{ route('admin.types.edit', $type->slug) }}">
+                                        <a class="btn btn-primary" href="{{ route('admin.types.edit', $type->slug) }}">
                                             <i class="fa-solid fa-pencil"></i>
                                         </a>
                                         <form class="m-0 p-0 d-inline-block"
                                             action="{{ route('admin.types.destroy', $type->slug) }}" method="POST">
                                             @method('DELETE')
                                             @csrf
-                                            <button class="btn btn-danger delete-button"
+                                            <button class="btn btn-secondary delete-button"
                                                 data-item-title="{{ $type->name }}" type="submit">
                                                 <i class="fa-solid fa-eraser"></i>
                                             </button>

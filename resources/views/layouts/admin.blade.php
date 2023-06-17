@@ -19,7 +19,7 @@
     @vite(['resources/js/app.js'])
 </head>
 
-<body class="sb-nav-fixed bg-dark text-bg-dark">
+<body class="sb-nav-fixed text-bg-dark">
     <div id="app">
 
         {{-- NAVBAR --}}
@@ -137,7 +137,7 @@
                 <main class="">
                     @yield('content')
                 </main>
-                @include('partials.footer')
+                @include('partials.footer-admin')
             </div>
         </div>
     </div>

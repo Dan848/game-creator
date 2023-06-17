@@ -16,7 +16,7 @@
         </ol>
     </div>
 
-    <div class="container mb-4">
+    <div class="container p-4 bg-dark rounded-2 mb-4">
         <div class="row">
             <div class="col">
                 <form class="container form-crud" method="POST" action="{{ route('admin.characters.store') }}"
@@ -154,8 +154,8 @@
                     <div class="d-flex container-fluid justify-content-start align-items-center flex-wrap">
                         @foreach ($items as $item)
                             <div class="form-check col-6 col-md-4 col-lg-3">
-                                <input type="checkbox" name="item[]" value="{{ $item->id }}" class="form-check-input"
-                                    {{ in_array($item->id, old('item', [])) ? 'checked' : '' }}>
+                                <input type="checkbox" id="items[]" name="items[]" value="{{ $item->id }}"
+                                    class="form-check-input" {{ in_array($item->id, old('item', [])) ? 'checked' : '' }}>
                                 <label for="" class="form-check-label">{{ $item->name }}</label>
                             </div>
                         @endforeach

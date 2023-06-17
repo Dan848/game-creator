@@ -22,8 +22,8 @@
                     <thead>
                         <tr>
                             <th scope="col">Nome</th>
-                            <th class="d-none d-sm-table-cell" scope="col">Classe</th>
-                            <th class="d-none d-lg-table-cell" scope="col">Punti Vita</th>
+                            <th class="d-none d-sm-table-cell" scope="col">Immagine</th>
+                            <th class="d-none d-lg-table-cell" scope="col">Classe</th>
                             <th class="text-center" scope="col">Azioni</th>
                         </tr>
                     </thead>
@@ -32,26 +32,29 @@
                             <tr class="align-middle">
                                 {{-- Name --}}
                                 <th scope="row">
-                                    <a class="h5 text-decoration-none"
+                                    <a class="h5"
                                         href="{{ route('admin.characters.show', $character) }}">{{ $character->name }}
                                     </a>
                                 </th>
-                                {{-- Class/Type --}}
+                                {{-- Image --}}
                                 <td class="d-none d-sm-table-cell">
-                                    <a class="d-block img-preview">{{ $character->type->name }}</a>
+                                    <img src="{{ $character->image ? $character->image : $character->type->image }}"
+                                        class="d-block img-preview">
                                 </td>
-                                {{-- Life --}}
-                                <td class="d-none d-lg-table-cell">{{ $character->life }}</td>
+                                {{-- Class/Type --}}
+                                <td class="d-none d-lg-table-cell">
+                                    <a class="d-block text-white img-preview">{{ $character->type->name }}</a>
+                                </td>
                                 {{-- Action Button --}}
                                 <td>
                                     <div
                                         class="d-flex gap-2 flex-wrap justify-content-center text-center align-items-center">
 
-                                        <a class="btn btn-light"
+                                        <a class="btn btn-success bg-gradient"
                                             href="{{ route('admin.characters.show', $character->slug) }}">
                                             <i class="fa-solid fa-eye"></i>
                                         </a>
-                                        <a class="btn btn-secondary"
+                                        <a class="btn btn-primary"
                                             href="{{ route('admin.characters.edit', $character->slug) }}">
                                             <i class="fa-solid fa-pencil"></i>
                                         </a>
@@ -60,7 +63,7 @@
                                             method="POST">
                                             @method('DELETE')
                                             @csrf
-                                            <button class="btn btn-danger delete-button"
+                                            <button class="btn btn-secondary delete-button"
                                                 data-item-title="{{ $character->name }}" type="submit">
                                                 <i class="fa-solid fa-eraser"></i>
                                             </button>
