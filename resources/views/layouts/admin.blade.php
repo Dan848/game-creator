@@ -28,7 +28,7 @@
             <div>
                 <!-- Navbar Brand-->
                 <a class="navbar-brand ps-3 fw-medium hover-scale" href="{{ url('/') }}">Bug Makers
-                    <span><img src="/img/logo.png" alt="logo" width="25px" height="25px"></span>
+                    <span><img src="/img/logo-inverted.png" alt="logo" width="25px" height="25px"></span>
                 </a>
                 <!-- Sidebar Toggle-->
                 <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0 hover-scale fs-5" id="sidebarToggle"
