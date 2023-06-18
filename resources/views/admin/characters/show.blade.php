@@ -79,11 +79,9 @@
                     <p class="text-center text-secondary">Inventario:</p>
                     @foreach ($character->items as $item)
                         @if (!$loop->last)
-                            <p>
-                                <span class="fst-italic">{{ $item->name }} - </span>
-                            @else
-                                <span class="fst-italic">{{ $item->name }}</span>
-                            </p>
+                            <span class="fst-italic">{{ $item->name }} - </span>
+                        @else
+                            <span class="fst-italic">{{ $item->name }}</span>
                         @endif
                     @endforeach
                 </div>
