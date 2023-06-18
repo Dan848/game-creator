@@ -10,14 +10,14 @@
         <div class="d-flex justify-content-between">
             <ol class="breadcrumb mb-4">
                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('admin.characters.index') }}">Classi</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.types.index') }}">Classi</a></li>
                 <li class="breadcrumb-item active">{{ $type->name }}</li>
             </ol>
             <div>
-                <a class="btn btn-primary" href="{{ route('admin.characters.edit', $type->slug) }}">
+                <a class="btn btn-primary" href="{{ route('admin.types.edit', $type->slug) }}">
                     <i class="fa-solid fa-pencil"></i>
                 </a>
-                <form class="m-0 p-0 d-inline-block" action="{{ route('admin.characters.destroy', $type->slug) }}"
+                <form class="m-0 p-0 d-inline-block" action="{{ route('admin.types.destroy', $type->slug) }}"
                     method="POST">
                     @method('DELETE')
                     @csrf
@@ -41,5 +41,5 @@
                 </li>
             </ul>
         </div>
-    </div>
+</div>
 @endsection

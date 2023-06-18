@@ -43,7 +43,7 @@
                                 </td>
                                 {{-- Class/Type --}}
                                 <td class="d-none d-lg-table-cell">
-                                    <a class="d-block text-white img-preview">{{ $character->type->name }}</a>
+                                    <a href="{{ route('admin.types.show', $character->type->slug) }}"class="d-block text-white img-preview">{{ $character->type->name }}</a>
                                 </td>
                                 {{-- Action Button --}}
                                 <td>
