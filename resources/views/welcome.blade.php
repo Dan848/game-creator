@@ -14,4 +14,5 @@
             </div>
         </div>
     </div>
+    @include('partials.footer-admin')
 @endsection

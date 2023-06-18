@@ -70,7 +70,7 @@
                 </main>
             </div>
             <div id="layoutAuthentication_footer">
-                @include('partials.footer')
+                @include('partials.footer-admin')
             </div>
         </div>
     </body>
