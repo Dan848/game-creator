@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use App\Models\Character;
+use App\Models\Item;
+use App\Models\Type;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -9,6 +11,10 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('admin.dashboard');
+
+        $characters = Character::paginate(3);
+        $types = Type::paginate(3);
+        $items = Item::paginate(3);
+        return view('admin.dashboard', compact("characters", "types", "items"));
     }
 }
