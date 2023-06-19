@@ -19,14 +19,16 @@ class ItemSeeder extends Seeder
         if (($handle = fopen(public_path("seed_csv/weapons.csv"), "r")) !== FALSE) {
             while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
                 if ($index > 0){
-                    $newType = new Item;
-                    $newType->name = $data[0];
-                    $newType->slug = $data[1];
-                    $newType->category = $data[3];
-                    $newType->type = $data[2];
-                    $newType->weight = getWeight($data[4]);
-                    $newType->cost = getCost($data[5]);
-                    $newType->save();
+                    $newItem = new Item;
+                    $newItem->name = $data[0];
+                    $newItem->slug = $data[1];
+                    $newItem->category = $data[3];
+                    $newItem->type = $data[2];
+                    $newItem->weight = getWeight($data[4]);
+                    $newItem->cost = getCost($data[5]);
+                    $newItem->dice_num = intval(getDiceNum($data[6])[0]);
+                    $newItem->dice_faces = intval(getDiceNum($data[6])[1]);
+                    $newItem->save();
                 }
                 $index++;
             }

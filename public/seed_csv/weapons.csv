@@ -31,8 +31,8 @@ Trident,trident,Weapons,Martial Melee Weapons,4 lb.,5 gp,1d6
 War pick,war-pick,Weapons,Martial Melee Weapons,2 lb.,5 gp,1d8
 Warhammer,warhammer,Weapons,Martial Melee Weapons,2 lb.,15 gp,1d8
 Whip,whip,Weapons,Martial Melee Weapons,3 lb.,2 gp,1d4
-Blowgun,blowgun,Weapons,Martial Ranged Weapons,1 lb.,10 gp,1
+Blowgun,blowgun,Weapons,Martial Ranged Weapons,1 lb.,10 gp,1d4
 "Crossbow, hand",crossbow-hand,Weapons,Martial Ranged Weapons,3 lb.,75 gp,1d6
 "Crossbow, heavy",crossbow-heavy,Weapons,Martial Ranged Weapons,18 lb.,50 gp,1d10
 Longbow,longbow,Weapons,Martial Ranged Weapons,2 lb.,50 gp,1d8
-Net,net,Weapons,Martial Ranged Weapons,3 lb.,1 gp,0
+Net,net,Weapons,Martial Ranged Weapons,3 lb.,1 gp,1d4

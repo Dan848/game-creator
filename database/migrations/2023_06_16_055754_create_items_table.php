@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string("type", 100);
             $table->decimal("weight", 4,2);
             $table->decimal("cost", 5,2);
+            $table->integer("dice_num")->default(1);
+            $table->integer("dice_faces");
             $table->timestamps();
         });
     }

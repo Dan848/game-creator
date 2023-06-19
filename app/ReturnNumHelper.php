@@ -24,3 +24,11 @@ function getCost($string)
     }
     return floatval($stringNum);
 }
+
+function getDiceNum($string)
+{
+    $arrString = explode('d', $string);
+
+    return $arrString;
+
+}
