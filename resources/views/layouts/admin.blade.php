@@ -87,7 +87,7 @@
                             <a class="nav-link collapsed" href="{{ route('admin.characters.index') }}"
                                 data-bs-toggle="collapse" data-bs-target="#collapsecharacters" aria-expanded="false"
                                 aria-controls="collapsecharacters">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-folder-open"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-people-group"></i></div>
                                 Personaggi
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -101,7 +101,7 @@
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                                 data-bs-target="#collapseType" aria-expanded="false" aria-controls="collapseType">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-folder-open"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-hat-wizard"></i></div>
                                 Classi
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -114,7 +114,7 @@
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                                 data-bs-target="#collapseItem" aria-expanded="false" aria-controls="collapseItem">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-folder-open"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-coins"></i></div>
                                 Oggetti
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
