@@ -14,7 +14,7 @@ class DashboardController extends Controller
 
         $characters = Character::paginate(3);
         $types = Type::paginate(3);
-        $items = Item::paginate(3);
+        $items = Item::paginate(8);
         return view('admin.dashboard', compact("characters", "types", "items"));
     }
 }
