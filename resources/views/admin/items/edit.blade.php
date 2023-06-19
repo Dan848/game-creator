@@ -28,19 +28,25 @@
                             @error('name')
                                 <p>*{{ $message }}</p>
                             @enderror
+                            @error('description')
+                                <p>*{{ $message }}</p>
+                            @enderror
                             @error('category')
                                 <p>*{{ $message }}</p>
                             @enderror
-                            @error('description')
+                            @error('dice_num')
                                 <p>*{{ $message }}</p>
                             @enderror
-                            @error('description')
+                            @error('dice_faces')
                                 <p>*{{ $message }}</p>
                             @enderror
-                            @error('description')
+                            @error('weight')
                                 <p>*{{ $message }}</p>
                             @enderror
-                            @error('description')
+                            @error('cost')
+                                <p>*{{ $message }}</p>
+                            @enderror
+                            @error('type')
                                 <p>*{{ $message }}</p>
                             @enderror
                         </div>
@@ -93,6 +99,24 @@
                                     class="form-control @error('type') is-invalid @enderror" value="{{ $item->type }}"
                                     autofocus>
                                 <label class="mb-5" for="type">Tipo</label>
+                            </div>
+                        </div>
+                        <!-- DICE NUMBER -->
+                        <div class="col-12 col-md-6">
+                            <div class="form-floating mb-3">
+                                <input id="dice_num" type="number"
+                                    class="form-control @error('dice_num') is-invalid @enderror" name="dice_num"
+                                    value="{{ old('dice_num') }}" autofocus>
+                                <label for="dice_num">Numero di Dadi</label>
+                            </div>
+                        </div>
+                        <!-- DICE FACES -->
+                        <div class="col-12 col-md-6">
+                            <div class="form-floating mb-3">
+                                <input id="dice_faces" name="dice_faces" type="number"
+                                    class="form-control @error('dice_faces') is-invalid @enderror" value="{{ old('dice_faces') }}"
+                                    autofocus>
+                                <label class="mb-5" for="dice_faces">Numero di facce</label>
                             </div>
                         </div>
                     </div>

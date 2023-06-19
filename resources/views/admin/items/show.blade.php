@@ -44,6 +44,9 @@
                 <li>
                     Descrizione: <span class="fw-bold">{{ $item['description'] }}</span>
                 </li>
+                <li>
+                    Danno: <span class="fw-bold">{{ $item['dice_num'] }} D{{ $item['dice_faces'] }}</span>
+                </li>
             </ul>
         </div>
 </div>
